@@ -1,291 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="google-site-verification" content="8rk_vBvOPWDmSulEi060FHg6DUZa6WPiCRRGqtptYY0">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lwanzhe Borehole & Irrigation – Reliable water solutions for homes, farms, and businesses. Borehole drilling, pump installations, and irrigation systems.">
   <title>Lwanzhe Borehole & Irrigation</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* GLOBAL STYLES */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f9f5;
+      color: #333;
+    }
+
+    header {
+      background: #155d27;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: #0f4020;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: url('assets/photo1.jpeg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    .hero h2 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    /* SERVICES */
+    .services-section {
+      padding: 80px 20px;
+      text-align: center;
+      background-color: #f5f9f5;
+    }
+
+    .services-section h2 {
+      color: #155d27;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      color: #444;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      position: relative;
+      height: 280px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .service-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(21, 93, 39, 0.6);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: background 0.3s ease;
+    }
+
+    .service-card:hover .service-overlay {
+      background: rgba(21, 93, 39, 0.8);
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 200;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 35px;
+      border-radius: 14px;
+      max-width: 650px;
+      width: 100%;
+      position: relative;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .modal-content h2 {
+      color: #155d27;
+      margin-top: 0;
+    }
+
+    .modal-content p {
+      color: #333;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px; right: 20px;
+      font-size: 28px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.9);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #25D366;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1eb957;
+    }
+
+    /* GALLERY */
+    #gallery {
+      padding: 70px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    #gallery h2 {
+      color: #155d27;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      height: 220px;
+      object-fit: cover;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    /* CONTACT */
+    #contact {
+      background: #155d27;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    #contact h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    #contact p {
+      font-size: 1.1rem;
+      margin: 5px 0;
+    }
+
+    #contact a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f4020;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .service-card { height: 220px; }
+      .service-overlay h3 { font-size: 1.1rem; }
+    }
+  </style>
 </head>
+
 <body>
   <header>
-    <h1 class="logo">Lwanzhe Borehole & Irrigation</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Lwanzhe Borehole & Irrigation</h1>
+    <p>Reliable Water Solutions for Homes, Farms & Businesses</p>
   </header>
 
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <section class="hero">
-    <h2>Your Trusted Borehole & Irrigation Experts</h2>
-    <p>Reliable drilling, water treatment, pump installation, and irrigation solutions.</p>
-    <a class="btn" href="mailto:infolwanzhe@gmail.com">Request a Quote</a>
+    <h2>Water Where You Need It</h2>
+    <p>We specialize in borehole drilling, pump installations, and irrigation systems designed for lasting performance.</p>
   </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Based in Centurion, Olievenhoutbosch, Lwanzhe Borehole & Irrigation specializes in
-      borehole drilling, water filtration and treatment, pump installation and maintenance,
-      and irrigation system setup. We deliver sustainable water solutions tailored to your needs.
+  <section id="services" class="services-section">
+    <h2>Our Services</h2>
+    <p class="intro-text">
+      Tap or click on a service to learn how Lwanzhe Borehole & Irrigation delivers trusted water solutions.
     </p>
-  </section>
 
-  <section id="services"><section id="services" class="services-section">
-  <h2>Our Services</h2>
-  <p class="intro-text">
-    At Lwanzhe Borehole & Irrigation, we provide end-to-end water solutions — from borehole drilling to irrigation system installations — designed for reliability and sustainability.
-  </p>
+    <div class="services-grid">
 
-  <div class="services-grid">
+      <div class="service-card" style="background-image: url('assets/photo1.jpeg');" onclick="openService('borehole')">
+        <div class="service-overlay"><h3>Borehole Drilling</h3></div>
+      </div>
 
-    <div class="service-card" style="background-image: url('assets/photo1.jpeg');" onclick="openService('borehole')">
-      <div class="service-overlay">
-        <h3>Borehole Drilling</h3>
+      <div class="service-card" style="background-image: url('assets/photo2.jpeg');" onclick="openService('pump')">
+        <div class="service-overlay"><h3>Pump Installation</h3></div>
+      </div>
+
+      <div class="service-card" style="background-image: url('assets/photo3.jpeg');" onclick="openService('irrigation')">
+        <div class="service-overlay"><h3>Irrigation Systems</h3></div>
+      </div>
+
+    </div>
+
+    <!-- Modal Popup -->
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeService()">&times;</span>
+        <div id="modalText"></div>
       </div>
     </div>
-
-    <div class="service-card" style="background-image: url('assets/photo2.jpeg');" onclick="openService('pump')">
-      <div class="service-overlay">
-        <h3>Pump Installation</h3>
-      </div>
-    </div>
-
-    <div class="service-card" style="background-image: url('assets/photo3.jpeg');" onclick="openService('irrigation')">
-      <div class="service-overlay">
-        <h3>Irrigation Systems</h3>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Modal Popup -->
-  <div id="serviceModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeService()">&times;</span>
-      <div id="modalText"></div>
-    </div>
-  </div>
-</section>
-
-<style>
-/* Section styling */
-.services-section {
-  background-color: #f9faf9;
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.services-section h2 {
-  color: #155d27;
-  font-size: 2.2rem;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.intro-text {
-  color: #444;
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-}
-
-/* Grid layout */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Card styling */
-.service-card {
-  position: relative;
-  height: 280px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 18px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.service-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.service-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(21, 93, 39, 0.6);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: background 0.3s ease;
-}
-
-.service-card:hover .service-overlay {
-  background: rgba(21, 93, 39, 0.8);
-}
-
-/* Modal Popup */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 200;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: #fff;
-  padding: 35px;
-  border-radius: 14px;
-  max-width: 550px;
-  width: 90%;
-  position: relative;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.modal-content h2 {
-  color: #155d27;
-  margin-top: 0;
-}
-
-.modal-content p {
-  color: #333;
-  line-height: 1.6;
-  margin-top: 15px;
-}
-
-.close {
-  position: absolute;
-  top: 10px; right: 20px;
-  font-size: 28px;
-  color: #333;
-  cursor: pointer;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
-}
-
-/* Mobile responsive */
-@media (max-width: 600px) {
-  .service-card { height: 220px; }
-  .service-overlay h3 { font-size: 1.1rem; }
-}
-</style>
-
-<script>
-function openService(service) {
-  const modal = document.getElementById('serviceModal');
-  const text = document.getElementById('modalText');
-  let content = '';
-
-  switch(service) {
-    case 'borehole':
-      content = `
-        <h2>Borehole Drilling</h2>
-        <p>We offer professional borehole drilling services using advanced technology to ensure consistent, clean water access. Our experienced team handles site assessment, drilling, and casing installation for long-lasting performance.</p>`;
-      break;
-    case 'pump':
-      content = `
-        <h2>Pump Installation</h2>
-        <p>We provide reliable pump installation and maintenance solutions for domestic, commercial, and agricultural clients. Our experts ensure optimal pump performance and efficient water delivery systems.</p>`;
-      break;
-    case 'irrigation':
-      content = `
-        <h2>Irrigation Systems</h2>
-        <p>We design and install high-quality irrigation systems tailored to your specific land or garden needs. From drip systems to sprinklers, we create efficient setups that save water and maximize crop yields.</p>`;
-      break;
-  }
-
-  text.innerHTML = content;
-  modal.style.display = 'flex';
-}
-
-function closeService() {
-  document.getElementById('serviceModal').style.display = 'none';
-}
-</script>
-
-    <h2>Our Services</h2><section id="services" class="services-section">
-  <h2>Our Services</h2>
-  <div class="services-grid">
-    
-    <div class="service-card" style="background-image: url('assets/photo1.jpeg');" onclick="openService('borehole')">
-      <div class="service-title">Borehole Drilling</div>
-    </div>
-
-    <div class="service-card" style="background-image: url('assets/photo2.jpeg');" onclick="openService('pump')">
-      <div class="service-title">Pump Installation</div>
-    </div>
-
-    <div class="service-card" style="background-image: url('assets/photo3.jpeg');" onclick="openService('irrigation')">
-      <div class="service-title">Irrigation Systems</div>
-    </div>
-
-  </div>
-
-  <!-- Popup Modal -->
-  <div id="serviceModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeService()">&times;</span>
-      <div id="modalText"></div>
-    </div>
-  </div>
-</section>
-
-    <ul>
-      <li>✅ Borehole Drilling</li>
-      <li>💧 Water Filtration & Treatment</li>
-      <li>⚙️ Pump Installation & Repair (Booster & Submersible)</li>
-      <li>🌿 Irrigation Pipes & Drips Installation</li>
-    </ul>
   </section>
 
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="assets/photo1.jpeg" alt="Borehole Drilling" />
-      <img src="assets/photo2.jpeg" alt="Pump Installation" />
-      <img src="assets/photo3.jpeg" alt="Irrigation System" />
+      <img src="assets/photo1.jpeg" alt="Borehole Drilling">
+      <img src="assets/photo2.jpeg" alt="Pump Installation">
+      <img src="assets/photo3.jpeg" alt="Irrigation System">
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>📍 9771 Misevhe Street, Olievenhoutbosch, Centurion, 0187</p>
-    <p>📞 079 242 1262</p>
-    <p>📧 <a href="mailto:infolwanzhe@gmail.com">infolwanzhe@gmail.com</a></p>
-    <div class="map">
-      <iframe
-        src="https://www.google.com/maps?q=9771%20Misevhe%20Street,%20Olievenhoutbosch,%20Centurion,%200187&output=embed"
-        width="100%"
-        height="300"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"></iframe>
-    </div>
+    <p>📍 Location: Limpopo, South Africa</p>
+    <p>📞 Phone: <a href="tel:+27792421262">+27 79 242 1262</a></p>
+    <p>📧 Email: <a href="mailto:info@lwanzhe.co.za">info@lwanzhe.co.za</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Lwanzhe Borehole & Irrigation. All rights reserved.</p>
+    &copy; 2025 Lwanzhe Borehole & Irrigation. All rights reserved.
   </footer>
+
+  <script>
+  function openService(service) {
+    const modal = document.getElementById('serviceModal');
+    const text = document.getElementById('modalText');
+    let content = '';
+
+    const whatsappLink = 'https://wa.me/27792421262?text=Hi%20Lwanzhe!%20I%20would%20like%20a%20quote%20for%20';
+
+    switch(service) {
+      case 'borehole':
+        content = `
+          <h2>Borehole Drilling</h2>
+          <p>At Lwanzhe Borehole & Irrigation, we bring water to life through precision drilling. 
+          Our expert team uses advanced equipment and geological analysis to identify the ideal spot for your borehole, 
+          ensuring consistent and clean water access. From the first soil test to the final installation, 
+          every step is handled with accuracy and care. Whether you need a household borehole, commercial setup, 
+          or agricultural water source, our drilling process is designed for durability and long-term performance.</p>
+          <a href="${whatsappLink}borehole%20drilling" class="whatsapp-btn">💬 Request a Quote via WhatsApp</a>`;
+        break;
+
+      case 'pump':
+        content = `
+          <h2>Pump Installation</h2>
+          <p>Once your borehole is ready, we make sure the water flows efficiently with our professional pump installation services. 
+          Our experienced technicians specialize in both submersible and surface pumps, ensuring optimal pressure and water delivery. 
+          We also provide energy-efficient and solar-powered options to suit your property’s needs. 
+          Every installation is tested for reliability, performance, and longevity — giving you a system that runs smoothly, 
+          day after day, with minimal maintenance.</p>
+          <a href="${whatsappLink}pump%20installation" class="whatsapp-btn">💬 Request a Quote via WhatsApp</a>`;
+        break;
+
+      case 'irrigation':
+        content = `
+          <h2>Irrigation Systems</h2>
+          <p>We design and install advanced irrigation systems that make water management simple and efficient. 
+          From drip irrigation that conserves water to sprinkler systems that keep your gardens and crops healthy, 
+          we tailor every solution to your environment. Our systems are built to save time, reduce waste, and boost productivity — 
+          whether you’re managing a small lawn or a large farm. With Lwanzhe, every drop counts, 
+          and your landscape thrives through smart, sustainable irrigation.</p>
+          <a href="${whatsappLink}irrigation%20systems" class="whatsapp-btn">💬 Request a Quote via WhatsApp</a>`;
+        break;
+    }
+
+    text.innerHTML = content;
+    modal.style.display = 'flex';
+  }
+
+  function closeService() {
+    document.getElementById('serviceModal').style.display = 'none';
+  }
+  </script>
 </body>
 </html>
