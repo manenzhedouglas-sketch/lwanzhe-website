@@ -224,7 +224,33 @@ function closeService() {
 }
 </script>
 
-    <h2>Our Services</h2>
+    <h2>Our Services</h2><section id="services" class="services-section">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    
+    <div class="service-card" style="background-image: url('assets/photo1.jpeg');" onclick="openService('borehole')">
+      <div class="service-title">Borehole Drilling</div>
+    </div>
+
+    <div class="service-card" style="background-image: url('assets/photo2.jpeg');" onclick="openService('pump')">
+      <div class="service-title">Pump Installation</div>
+    </div>
+
+    <div class="service-card" style="background-image: url('assets/photo3.jpeg');" onclick="openService('irrigation')">
+      <div class="service-title">Irrigation Systems</div>
+    </div>
+
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeService()">&times;</span>
+      <div id="modalText"></div>
+    </div>
+  </div>
+</section>
+
     <ul>
       <li>✅ Borehole Drilling</li>
       <li>💧 Water Filtration & Treatment</li>
