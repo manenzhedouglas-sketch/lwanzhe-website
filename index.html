@@ -3,404 +3,195 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lwanzhe Borehole & Irrigation – Reliable water solutions for homes, farms, and businesses. Borehole drilling, pump installations, and irrigation systems.">
   <title>Lwanzhe Borehole & Irrigation</title>
-  <style>.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
 
-.logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  border-radius: 10px;
-  background-color: white;
-  padding: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.title-text h1 {
-  margin: 0;
-  font-size: 2rem;
-  color: #2e7d32;
-}
-
-.title-text p {
-  margin: 5px 0 0;
-  font-size: 1rem;
-  color: #388e3c;
-}
-
-    /* GLOBAL STYLES */
+  <style>
     body {
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: #f5f9f5;
+      background: #f5f5f5;
       color: #333;
     }
-    <header>
-  <div class="header-content">
-    <a href="#top">
-      <img src="assets/logo.jpeg" alt="Lwanzhe Logo" class="logo" />
-    </a>
-    <div class="title-text">
-      <h1>Lwanzhe Borehole & Irrigation</h1>
-      <p>Reliable Water Solutions for Homes, Farms & Businesses</p>
-    </div>
-  </div>
-</header>
 
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      letter-spacing: 1px;
-    }
-
-    nav {
-      background: #0f4020;
-      padding: 10px 0;
+    header {
+      background: linear-gradient(135deg, #2e7d32, #4caf50);
+      color: white;
+      padding: 20px;
       text-align: center;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* HERO SECTION */
-    .hero {
-      background: url('assets/photo1.jpeg') center/cover no-repeat;
-      height: 60vh;
+    .header-content {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
-      color: white;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
-    .hero h2 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
+    .logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 10px;
+      background-color: white;
+      padding: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
+    .title-text h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .title-text p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+    }
+
+    section {
+      padding: 40px 20px;
       text-align: center;
     }
 
-    /* SERVICES */
-    .services-section {
-      padding: 80px 20px;
-      text-align: center;
-      background-color: #f5f9f5;
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
     }
 
-    .services-section h2 {
-      color: #155d27;
-      font-size: 2.2rem;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .intro-text {
-      color: #444;
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
-    }
-
-    .services-grid {
+    /* Services */
+    .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      max-width: 1200px;
-      margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      justify-items: center;
     }
 
-    .service-card {
+    .service {
       position: relative;
-      height: 280px;
+      width: 100%;
+      max-width: 350px;
+      height: 220px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
       background-size: cover;
       background-position: center;
-      border-radius: 18px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
 
-    .service-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    .service:hover {
+      transform: scale(1.03);
     }
 
-    .service-overlay {
+    .service .overlay {
       position: absolute;
-      inset: 0;
-      background: rgba(21, 93, 39, 0.6);
-      color: #fff;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: background 0.3s ease;
-    }
-
-    .service-card:hover .service-overlay {
-      background: rgba(21, 93, 39, 0.8);
-    }
-
-    /* MODAL */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 200;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s;
       padding: 20px;
-    }
-
-    .modal-content {
-      background: #fff;
-      padding: 35px;
-      border-radius: 14px;
-      max-width: 650px;
-      width: 100%;
-      position: relative;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    .modal-content h2 {
-      color: #155d27;
-      margin-top: 0;
-    }
-
-    .modal-content p {
-      color: #333;
-      line-height: 1.8;
-      font-size: 1.05rem;
-    }
-
-    .close {
-      position: absolute;
-      top: 10px; right: 20px;
-      font-size: 28px;
-      color: #333;
-      cursor: pointer;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: scale(0.9);}
-      to {opacity: 1; transform: scale(1);}
-    }
-
-    /* GALLERY */
-    #gallery {
-      padding: 70px 20px;
       text-align: center;
-      background-color: #fff;
     }
 
-    #gallery h2 {
-      color: #155d27;
-      font-size: 2rem;
-      margin-bottom: 30px;
+    .service:hover .overlay {
+      opacity: 1;
     }
 
+    /* Gallery */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+      gap: 15px;
     }
 
     .gallery img {
       width: 100%;
-      border-radius: 12px;
-      height: 220px;
-      object-fit: cover;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
-    /* CONTACT */
-    #contact {
-      background: #155d27;
+    /* Contact */
+    .contact {
+      background: #e8f5e9;
+      padding: 40px 20px;
+      border-top: 2px solid #4caf50;
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #2e7d32;
       color: white;
       text-align: center;
-      padding: 60px 20px;
-    }
-
-    #contact h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-
-    #contact p {
-      font-size: 1.1rem;
-      margin: 5px 0;
-    }
-
-    #contact a {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #0f4020;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      .service-card { height: 220px; }
-      .service-overlay h3 { font-size: 1.1rem; }
+      padding: 10px;
     }
   </style>
 </head>
-
 <body>
+
   <header>
-    <h1>Lwanzhe Borehole & Irrigation</h1>
-    <p>Reliable Water Solutions for Homes, Farms & Businesses</p>
+    <div class="header-content">
+      <a href="#top">
+        <img src="assets/logo.jpeg" alt="Lwanzhe Logo" class="logo">
+      </a>
+      <div class="title-text">
+        <h1>Lwanzhe Borehole & Irrigation</h1>
+        <p>Reliable Water Solutions for Homes, Farms & Businesses</p>
+      </div>
+    </div>
   </header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section class="hero">
-    <h2>Water Where You Need It</h2>
-    <p>We specialize in borehole drilling, pump installations, and irrigation systems designed for lasting performance.</p>
-  </section>
-
-  <section id="services" class="services-section">
+  <section id="services">
     <h2>Our Services</h2>
-    <p class="intro-text">
-      Tap or click on a service to learn how Lwanzhe Borehole & Irrigation delivers trusted water solutions.
-    </p>
+    <div class="services">
 
-    <div class="services-grid">
-
-      <div class="service-card" style="background-image: url('assets/photo1.jpeg');" onclick="openService('borehole')">
-        <div class="service-overlay">
-          <h3>Borehole Drilling</h3>
+      <div class="service" style="background-image: url('assets/borehole.jpg');">
+        <div class="overlay">
+          <p><strong>Borehole Drilling:</strong><br>We provide professional borehole drilling with modern equipment to ensure sustainable access to underground water sources for residential, commercial, and agricultural needs.</p>
         </div>
       </div>
 
-      <div class="service-card" style="background-image: url('assets/photo2.jpeg');" onclick="openService('pump')">
-        <div class="service-overlay">
-          <h3>Pump Installation</h3>
+      <div class="service" style="background-image: url('assets/pump.jpg');">
+        <div class="overlay">
+          <p><strong>Pump Installation:</strong><br>Our experienced team installs and maintains submersible and surface pumps for efficient and reliable water delivery from your borehole to where you need it.</p>
         </div>
       </div>
 
-      <div class="service-card" style="background-image: url('assets/photo3.jpeg');" onclick="openService('irrigation')">
-        <div class="service-overlay">
-          <h3>Irrigation Systems</h3>
+      <div class="service" style="background-image: url('assets/irrigation.jpg');">
+        <div class="overlay">
+          <p><strong>Irrigation Systems:</strong><br>We design and install smart irrigation systems that save water, reduce costs, and improve crop yield using automated and drip technologies.</p>
         </div>
       </div>
 
-    </div>
-
-    <!-- Modal Popup -->
-    <div id="serviceModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeService()">&times;</span>
-        <div id="modalText"></div>
-      </div>
     </div>
   </section>
 
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="assets/photo1.jpeg" alt="Borehole Drilling">
-      <img src="assets/photo2.jpeg" alt="Pump Installation">
-      <img src="assets/photo3.jpeg" alt="Irrigation System">
+      <img src="assets/photo1.jpg" alt="Borehole Drilling" />
+      <img src="assets/photo2.jpg" alt="Pump Installation" />
+      <img src="assets/photo3.jpg" alt="Irrigation System" />
     </div>
   </section>
 
-  <section id="contact">
+  <section class="contact">
     <h2>Contact Us</h2>
-    <p>📍 Location: Limpopo, South Africa</p>
-    <p>📞 Phone: <a href="tel:+27821234567">+27 82 123 4567</a></p>
-    <p>📧 Email: <a href="mailto:info@lwanzhe.co.za">info@lwanzhe.co.za</a></p>
+    <p>📞 Call or WhatsApp: <a href="tel:+27792421262">+27 79 242 1262</a></p>
+    <p>🌍 We serve homes, farms, and businesses across South Africa.</p>
   </section>
 
   <footer>
-    &copy; 2025 Lwanzhe Borehole & Irrigation. All rights reserved.
+    <p>&copy; 2025 Lwanzhe Borehole & Irrigation. All rights reserved.</p>
   </footer>
 
-  <script>
-  function openService(service) {
-    const modal = document.getElementById('serviceModal');
-    const text = document.getElementById('modalText');
-    let content = '';
-
-    switch(service) {
-      case 'borehole':
-        content = `
-          <h2>Borehole Drilling</h2>
-          <p>At Lwanzhe Borehole & Irrigation, we bring water to life through precision drilling. 
-          Our expert team uses advanced equipment and geological analysis to identify the ideal spot for your borehole, 
-          ensuring consistent and clean water access. From the first soil test to the final installation, 
-          every step is handled with accuracy and care. Whether you need a household borehole, commercial setup, 
-          or agricultural water source, our drilling process is designed for durability and long-term performance.</p>`;
-        break;
-
-      case 'pump':
-        content = `
-          <h2>Pump Installation</h2>
-          <p>Once your borehole is ready, we make sure the water flows efficiently with our professional pump installation services. 
-          Our experienced technicians specialize in both submersible and surface pumps, ensuring optimal pressure and water delivery. 
-          We also provide energy-efficient and solar-powered options to suit your property’s needs. 
-          Every installation is tested for reliability, performance, and longevity — giving you a system that runs smoothly, 
-          day after day, with minimal maintenance.</p>`;
-        break;
-
-      case 'irrigation':
-        content = `
-          <h2>Irrigation Systems</h2>
-          <p>We design and install advanced irrigation systems that make water management simple and efficient. 
-          From drip irrigation that conserves water to sprinkler systems that keep your gardens and crops healthy, 
-          we tailor every solution to your environment. Our systems are built to save time, reduce waste, and boost productivity — 
-          whether you’re managing a small lawn or a large farm. With Lwanzhe, every drop counts, 
-          and your landscape thrives through smart, sustainable irrigation.</p>`;
-        break;
-    }
-
-    text.innerHTML = content;
-    modal.style.display = 'flex';
-  }
-
-  function closeService() {
-    document.getElementById('serviceModal').style.display = 'none';
-  }
-  </script>
 </body>
 </html>
